@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="Thumbnail.css">
+</head>
+
+<body>
+<div class="icon" align="center">
+		<img src="ourlogo.png" width="180" height="150" align="left"> <div class="text"><i><u>Mozart Music</u></i></div>
+	</div>
+	<div class="tab">
+		<button onclick="location.href='latest.html'" class="tabelements">Home</button>
+		<button onclick="location.href='quiz.html'" class="tabelements">Quiz</button>
+		<button onclick="location.href='Thumbnails.html'" class="tabelements">Thumbnails</button>
+		<button onclick="location.href='buymy.html'" class="tabelements">Products</button>
+		<button onclick="location.href='studentDetails.html'" class="tabelements">Student Details</button>
+		<button onclick="location.href='Diagram.html'" class="tabelements">Sitemap</button>
+		<button onclick="location.href='Queries.html'" class="tabelements">Queries</button>
+	</div>
+
+<h1>THUMBNAILS</h1>
+<div class="row">
+    <div class="column">
+      <img class="demo cursor" src="piano1.jpg" style="width:100%" onclick="currentSlide(1)" alt=
+	  " <h3>Piano</h3>
+	  A piano is a keyboard musical instrument that has wire strings that sound when struck by felt-covered hammers operated from a keyboard
+	  <br>The standard modern piano has 88 keys and has a compass of seven full octaves plus a few keys.
+	  <br>One of the best-known pianists of the early 21st century is Mitsuko Uchida.
+	  <br>Bartolomeo Cristofori is often credited with inventing the piano about 1709, though this has been disputed
+	  ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="opal.jpg" style="width:100%" onclick="currentSlide(2)" alt=
+	   " <h3>Trumpet</h3>
+	   A trumpet is a brass instrument.
+	   <br>The Trumpet is played by blowing into the mouthpiece and making a buzzing sound.
+	   <br>Classical music is written for solo trumpet, and trumpets are included in orchestras
+	   <br>Some famous classical trumpet players are Adolph Herseth, Sergei Nakariakov and Maurice Andre.
+	   ">
+    </div>
+   
+    <div class="column">
+      <img class="demo cursor" src="violin1.jpg" style="width:100%" onclick="currentSlide(3)" alt="
+	  <h3>Violin</h3>
+	  The violin is a string instrument which has four strings and is played with a bow.
+	  <br>The strings are usually tuned to the notes G, D, A, and E.
+	  <br>It is held between the left collar bone and the chin.
+	  <br>Different notes are made by fingering with the left hand while bowing with the right.Unlike guitar, it has no frets or other markers on the fingerboard.
+	  ">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="Mozart.jpg" style="width:100%" onclick="currentSlide(4)" alt="
+	   <h3>Wolfgang Amadeus Mozart</h3>
+	   He (27 January 1756 – 5 December 1791) was one of the most influential, popular and prolific composers of the classical period. 
+	   <br>A child prodigy, from an early age he began composing over 600 works, including some of the most famous pieces of symphonic, chamber, operatic, and choral music.
+	   <br>Mozart was born in Salzburg to a musical family.
+	   <br>Mozart showed all the signs of a prodigious musical talent.
+	  ">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="Beethoven.jpg" style="width:100%" onclick="currentSlide(5)" alt="
+	  <h3>Ludwig van Beethoven</h3>
+	  Ludwig van Beethoven (baptized 17 December 1770 in Bonn–26 March 1827 in Vienna) was a German composer.
+	  <br>He wrote classical music for the piano, orchestras and different groups of instruments.
+	  <br>His best-known works are his third (Eroica), fifth, sixth (Pastorale) and ninth (Choral) symphonies, the eighth (Pathetique) 
+	  <br>and fourteenth (Moonlight) piano sonatas, two of his later piano concertos, his opera Fidelio, and also the piano piece Für Elise.
+	  
+	  ">
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="SDL">
+    <div class="numbertext"></div>
+    
+  </div>
+
+  <div class="SDL">
+    <div class="numbertext"></div>
+    
+  </div>
+
+  <div class="SDL">
+    <div class="numbertext"></div>
+   
+  </div>
+    
+  <div class="SDL">
+    <div class="numbertext"></div>
+   
+  </div>
+
+  <div class="SDL">
+    <div class="numbertext"></div>
+    
+  </div>
+    
+  <div class="SDL">
+    <div class="numbertext"></div>
+    
+  </div>
+    
+
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("SDL");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+ <a href="Sajeewa.html">Page Developer</a>   
+</body>
+</html>

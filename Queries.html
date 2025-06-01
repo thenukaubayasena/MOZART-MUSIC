@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Queries "</title>
+<link rel="stylesheet" href="Queries.css">
+    <script>
+     function myFunction(frm){
+
+        if(frm.First Name.value=="")
+        alert ("First name needed. ")
+        if(frm.SirName.value=="")
+        alert("Sir name needed")
+        if (frm.Adress.value=="")
+        alert("Adress needed")
+        if (frm.CreditCard.value=="")
+        alert("Credit card number needed")}
+        </script>
+
+
+</head>
+
+
+<body>
+<div class="icon" align="center">
+		<img src="ourlogo.png" width="180" height="150" align="left"> <div class="text"><i><u>Mozart Music</u></i></div>
+	</div>
+	<div class="tab">
+		<button onclick="location.href='latest.html'" class="tabelements">Home</button>
+		<button onclick="location.href='quiz.html'" class="tabelements">Quiz</button>
+		<button onclick="location.href='Thumbnails.html'" class="tabelements">Thumbnails</button>
+		<button onclick="location.href='buymy.html'" class="tabelements">Products</button>
+		<button onclick="location.href='studentDetails.html'" class="tabelements">Student Details</button>
+		<button onclick="location.href='Diagram.html'" class="tabelements">Sitemap</button>
+		<button onclick="location.href='Queries.html'" class="tabelements">Queries</button>
+	</div>
+
+<h1>QUERIES</h1>
+<form >
+    <fieldset style="background-color:black; color:gold">
+        <legend><h2> <b> <i>YOUR DETAILS </i> </b></h2></legend>
+
+        <label for="fname"> FirstName:<br>
+            <input type="text" name="First Name" id="fname" placeholder="Enter your First name" size="20">
+        </label>
+        <br>
+        <label for="lname"> Sir Name:<br>
+            <input type="text" name="Sir Name" id="lname" placeholder="Enter your sir name" size="20">
+        </label>
+        <br>
+        <label for="Email"> Email Address:<br>
+            <input type="email" name="Email Address" placeholder="Enter your email address" id="Email" size="20">
+        </label>
+        <br>
+        <label for="music2">Choose the music way:</label><br>
+
+        <input type="radio" name="music" id="music1" value="m1" size="20">
+        <label for="music1"> Western Music</label>
+        <br>
+        <input type="radio" name="Level" id="music2" value="m2" size="20">
+        <label for="music2"> Classical Music
+        </label>
+        <br>
+        <label for="Music Genre">Music Genre:</label><br>
+        <select name="Music Genre" id="Music Genre">
+            <option value="popm">Pop Music</option>
+            <option value="rockm">Rock Music</option>
+            <option value="jazzm">Jazz Music</option>
+            <option value="hiphopm">Hiphop Music</option>
+            <option value="coum">Country Music</option>
+        </select>
+
+        <br>
+        <label for="Queries"> Your Queries: </label><br>
+        <textarea name="Queries" id="Queries">
+</textarea>
+        <br>
+
+
+        <label for="conditions">Terms and Conditions:</label>
+        <input type="checkbox" name="conditions" id="conditions" required>
+    </fieldset>
+
+    <br>
+   <fieldset style="background-color:black; color:gold">
+    <legend ></legend>
+    <input type=button value="submit" onclick="myFunction(this.form)" >
+    <input type=button name="button" value="reset" onclick="this.form.reset();">
+
+  </fieldset>
+
+
+
+
+
+</form>
+
+<a href="Kavi.html">Page Developer</a>
+
+</body>
+</html>

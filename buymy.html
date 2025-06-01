@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+	<a name="top"></a>
+	<link rel="stylesheet" href="buyproducts.css">
+	<title>music buy</title>
+ <script>
+     <!---Validation of the form--->
+     function myFunction(frm){
+
+        if(frm.FirstName.value=="")
+        alert ("First name needed. ")
+        if(frm.SirName.value=="")
+        alert("Sir name needed")
+        if (frm.Adress.value=="")
+        alert("Adress needed")
+        if (frm.CreditCard.value=="")
+        alert("Credit card number needed")
+        else{
+
+
+
+			var piano=parseInt(document.getElementById("piano").value) || 0;
+			var violin = parseInt(document.getElementById("violin").value) || 0;
+			var guitar =parseInt (document.getElementById("guitar").value) || 0;
+<!---Calculating the total price--->
+
+var tot1 =piano*90000;
+var tot2 =violin*35000;
+var tot3 =guitar*25000;
+var total =(tot1+tot2+tot3);
+<!---Displaying the invoice--->
+document.getElementById("order").innerHTML ="First Name: "+document.getElementById("name1").value+"\nSir Name: "+document.getElementById("name2").value+"\nEmail Adress: "+document.getElementById("email").value+"\nAdress: "+document.getElementById("adress").value+"\nCredit Card Number:"+document.getElementById("credit").value+"\nTotal Amount: Rs "+total+".00 "}}
+
+
+
+
+    </script>
+</head>
+<body>
+<!---Navigation bar--->
+	<div class="icon" align="center">
+		<img src="ourlogo.png" width="180" height="150" align="left"> <div class="text"><i><u>Mozart Music</u></i></div>
+	</div>
+	<div class="tab">
+		<button onclick="location.href='latest.html'" class="tabelements">Home</button>
+		<button onclick="location.href='quiz.html'" class="tabelements">Quiz</button>
+		<button onclick="location.href='Thumbnails.html'" class="tabelements">Thumbnails</button>
+		<button onclick="location.href='buymy.html'" class="tabelements">Products</button>
+		<button onclick="location.href='studentDetails.html'" class="tabelements">Student Details</button>
+		<button onclick="location.href='Diagram.html'" class="tabelements">Sitemap</button>
+		<button onclick="location.href='Queries.html'" class="tabelements">Queries</button>
+	</div>
+
+<h1 id="top1" style="font-size:50px">BUY PRODUCTS</h1>
+
+<!--- products--->
+<table >
+  <tr>
+    <td>
+      <div class="square">
+        <img src="piano.jpg" alt="an image of a piano" height="350"  width="300" >
+        <h1>Black Piano</h1>
+        <p class="price">Rs 90,000</p>
+<div class="description">
+        <p >A piano is a western music instrument mostly used in churches</p>
+        <label for = "piano"> Order quantity: </label> <input type = "text" name = "quantity1" id = "piano">
+      </div>
+</div>
+    </td>
+    <td>
+      <div class="square">
+        <img src="violin.jpg" alt="an image of a violin" height="350" width="300">
+        <h1>Violin</h1>
+        <p class="price">Rs 35,000</p>
+<div class="description">
+        <p>A violin sometimes known as fiddle is a western classical instrument.</p>
+        <label for = "violin"> Order quantity: </label> <input type = "text" name = "quantity" id = "violin">
+</div>
+
+      </div>
+    </td>
+    <td>
+      <div class="square">
+        <img src="guitar.jpg" alt="an image of a guitar" height="350" width="300">
+        <h1>Guitar</h1>
+        <p class="price">Rs 25,000</p>
+<div class="description">
+        <p>A guitar is a fretted musical instrument.</p>
+        <label for = "guitar"> Order quantity: </label> <input type = "text" name = "quantity" id = "guitar">
+</div>
+
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!--- The Form--->
+<form >
+  <fieldset style="background-color:black; color:gold">
+    <legend style="color:gold"><h2> <b> <i>Your details </i> </b></h2></legend>
+
+    <label for="name1"> First Name:<br>
+      <input type="text" name="FirstName" id="name1" placeholder="Enter your First name" size="20">
+    </label>
+    <br>
+    <label for="name2"> Sir Name:<br>
+      <input type="text" name="SirName" id="name2" placeholder="Enter your sir name" size="20">
+    </label>
+    <br>
+    <label for="email"> Email adress:<br>
+      <input type="email" name="Emailadress" placeholder="Enter your email adress" id="email" size="20">
+    </label>
+    <br>
+    <label for="adress">Adress:<br>
+      <input type="text" name="Adress" placeholder="Enter your adress" id="adress" size="20">
+    </label>
+    <br>
+    <label for="credit" >Credit Card Number<br>
+      <input type="text" name="CreditCard" placeholder="Enter your credit card Number" id="credit" size="20">
+    </label>
+    <br>
+
+    <label for="conditions">Terms and Conditions:
+      <input type="checkbox" name="conditions" id="conditions" >
+    </label>
+    <br>
+  </fieldset>
+
+  <br>
+  <fieldset style="background-color:black;color:gold">
+    <legend ></legend>
+    <input type=button value="submit" onclick="myFunction(this.form)" >
+    <input type=button name="button" value="reset" onclick="this.form.reset();">
+    <br>
+    <label for="order">Order Summary:
+      <textarea id="order" name="order" rows="6" cols="50" > </textarea></label>
+  </fieldset>
+</form>
+<a href="#top1"><img src="top-button.png" alt="Back to top" width="50" height="50">Back to top</a>
+<br>
+	
+		
+		<a href="Melsha.html">Page Developer</a>
+		
+</body>	
+</html>
